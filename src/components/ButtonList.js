@@ -1,23 +1,12 @@
 import React from "react";
 import Button from "./Button";
 
-const list = ["All", "Live", "Gaming"];
+const buttons = ["All", "Music", "Mixes", "Live", "Dramedy", "Bollywood Music", "Thrillers", "Cricket", "Big Boss", "Gaming", "Indian pop music", "Gadgets", "Cars", "Lessons", "Science", "Recently uploaded", "New to you"]
 
 const ButtonList = () => {
   return (
-    <div className="flex">
-      <Button name="All" />
-      <Button name="Gaming" />
-      <Button name="Songs" />
-      <Button name="Live" />
-      <Button name="Soccer" />
-      <Button name="Cricket" />
-      <Button name="Cooking" />
-      <Button name="Cricket" />
-      <Button name="Valentines" />
-      <Button name="Cricket" />
-      <Button name="Cooking" />
-      <Button name="Cricket" />
+    <div className="flex overflow-x-scroll">
+      {buttons.map(button => <Button key = {button.id} name={button} />)}
     </div>
   );
 };
